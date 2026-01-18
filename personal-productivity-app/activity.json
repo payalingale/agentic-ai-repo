@@ -1,0 +1,16 @@
+{
+  "2026-01-16": [
+    {
+      "activity": "journaling",
+      "duration": 30,
+      "notes": "awsm",
+      "timestamp": "10.30"
+    },
+    {
+      "activity": "sleeping",
+      "duration": 10,
+      "notes": "rested",
+      "timestamp": "10.30"
+    }
+  ]
+}
