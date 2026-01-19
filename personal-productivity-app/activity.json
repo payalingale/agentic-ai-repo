@@ -1,16 +1,448 @@
 {
-  "2026-01-16": [
+  "2026-01-01": [
     {
-      "activity": "journaling",
-      "duration": 30,
-      "notes": "awsm",
-      "timestamp": "10.30"
+      "activityName": "reading",
+      "durationInMin": 60,
+      "notes": "New Year reflections",
+      "timestamp": "10:00"
     },
     {
-      "activity": "sleeping",
-      "duration": 10,
-      "notes": "rested",
-      "timestamp": "10.30"
+      "activityName": "exercise",
+      "durationInMin": 45,
+      "notes": "Morning run",
+      "timestamp": "07:00"
+    }
+  ],
+  "2026-01-02": [
+    {
+      "activityName": "coding",
+      "durationInMin": 130,
+      "notes": "Feature implementation",
+      "timestamp": "09:00"
+    },
+    {
+      "activityName": "testing",
+      "durationInMin": 75,
+      "notes": "Integration tests",
+      "timestamp": "14:00"
+    }
+  ],
+  "2026-01-03": [
+    {
+      "activityName": "learning",
+      "durationInMin": 90,
+      "notes": "React hooks",
+      "timestamp": "11:00"
+    },
+    {
+      "activityName": "exercise",
+      "durationInMin": 40,
+      "notes": "Yoga",
+      "timestamp": "07:00"
+    }
+  ],
+  "2026-01-04": [
+    {
+      "activityName": "coding",
+      "durationInMin": 150,
+      "notes": "Bug fixes",
+      "timestamp": "09:00"
+    },
+    {
+      "activityName": "writing",
+      "durationInMin": 60,
+      "notes": "Documentation",
+      "timestamp": "15:00"
+    }
+  ],
+  "2026-01-05": [
+    {
+      "activityName": "meeting",
+      "durationInMin": 120,
+      "notes": "Sprint planning",
+      "timestamp": "10:00"
+    },
+    {
+      "activityName": "coding",
+      "durationInMin": 90,
+      "notes": "Code review",
+      "timestamp": "14:00"
+    }
+  ],
+  "2026-01-06": [
+    {
+      "activityName": "exercise",
+      "durationInMin": 50,
+      "notes": "Morning jog",
+      "timestamp": "07:00"
+    },
+    {
+      "activityName": "learning",
+      "durationInMin": 75,
+      "notes": "Python asyncio",
+      "timestamp": "11:00"
+    }
+  ],
+  "2026-01-07": [
+    {
+      "activityName": "coding",
+      "durationInMin": 140,
+      "notes": "API endpoints",
+      "timestamp": "09:00"
+    },
+    {
+      "activityName": "reading",
+      "durationInMin": 45,
+      "notes": "Design patterns",
+      "timestamp": "15:00"
+    }
+  ],
+  "2026-01-08": [
+    {
+      "activityName": "testing",
+      "durationInMin": 100,
+      "notes": "Unit tests",
+      "timestamp": "10:00"
+    },
+    {
+      "activityName": "exercise",
+      "durationInMin": 45,
+      "notes": "Gym",
+      "timestamp": "18:00"
+    }
+  ],
+  "2026-01-09": [
+    {
+      "activityName": "writing",
+      "durationInMin": 90,
+      "notes": "Blog post",
+      "timestamp": "11:00"
+    },
+    {
+      "activityName": "coding",
+      "durationInMin": 120,
+      "notes": "Refactoring",
+      "timestamp": "14:00"
+    }
+  ],
+  "2026-01-10": [
+    {
+      "activityName": "learning",
+      "durationInMin": 85,
+      "notes": "Machine learning basics",
+      "timestamp": "10:00"
+    },
+    {
+      "activityName": "reading",
+      "durationInMin": 50,
+      "notes": "Research papers",
+      "timestamp": "16:00"
+    }
+  ],
+  "2026-01-11": [
+    {
+      "activityName": "coding",
+      "durationInMin": 160,
+      "notes": "New feature",
+      "timestamp": "09:00"
+    },
+    {
+      "activityName": "meeting",
+      "durationInMin": 60,
+      "notes": "Client call",
+      "timestamp": "15:00"
+    }
+  ],
+  "2026-01-12": [
+    {
+      "activityName": "coding",
+      "durationInMin": 120,
+      "notes": "Built API endpoints",
+      "timestamp": "09:00"
+    },
+    {
+      "activityName": "reading",
+      "durationInMin": 30,
+      "notes": "Python documentation",
+      "timestamp": "14:00"
+    }
+  ],
+  "2026-01-13": [
+    {
+      "activityName": "debugging",
+      "durationInMin": 90,
+      "notes": "Fixed authentication issues",
+      "timestamp": "10:00"
+    },
+    {
+      "activityName": "exercise",
+      "durationInMin": 45,
+      "notes": "Morning jog",
+      "timestamp": "07:00"
+    }
+  ],
+  "2026-01-14": [
+    {
+      "activityName": "meeting",
+      "durationInMin": 60,
+      "notes": "Team standup",
+      "timestamp": "11:00"
+    },
+    {
+      "activityName": "writing",
+      "durationInMin": 45,
+      "notes": "Documentation",
+      "timestamp": "15:00"
+    }
+  ],
+  "2026-01-15": [
+    {
+      "activityName": "coding",
+      "durationInMin": 150,
+      "notes": "Feature development",
+      "timestamp": "09:00"
+    },
+    {
+      "activityName": "testing",
+      "durationInMin": 60,
+      "notes": "Unit tests",
+      "timestamp": "14:00"
+    }
+  ],
+  "2026-01-16": [
+    {
+      "activityName": "journaling",
+      "durationInMin": 30,
+      "notes": "Daily reflection",
+      "timestamp": "08:00"
+    },
+    {
+      "activityName": "coding",
+      "durationInMin": 120,
+      "notes": "Bug fixes",
+      "timestamp": "10:00"
+    }
+  ],
+  "2026-01-17": [
+    {
+      "activityName": "learning",
+      "durationInMin": 90,
+      "notes": "React tutorial",
+      "timestamp": "11:00"
+    },
+    {
+      "activityName": "exercise",
+      "durationInMin": 30,
+      "notes": "Yoga",
+      "timestamp": "07:00"
+    }
+  ],
+  "2026-01-18": [
+    {
+      "activityName": "coding",
+      "durationInMin": 110,
+      "notes": "Refactoring code",
+      "timestamp": "09:30"
+    },
+    {
+      "activityName": "meeting",
+      "durationInMin": 45,
+      "notes": "Client call",
+      "timestamp": "16:00"
+    },
+    {
+      "activityName": "learning",
+      "durationInMin": 60,
+      "notes": "Weekly progress tracking",
+      "timestamp": "18:00"
+    }
+  ],
+  "2026-01-19": [
+    {
+      "activityName": "learning of agentic ai",
+      "durationInMin": 90,
+      "notes": "felt crashed",
+      "timestamp": "09:28"
+    },
+    {
+      "activityName": "exercise",
+      "durationInMin": 50,
+      "notes": "Recovery workout",
+      "timestamp": "07:00"
+    }
+  ],
+  "2026-01-20": [
+    {
+      "activityName": "coding",
+      "durationInMin": 135,
+      "notes": "Database optimization",
+      "timestamp": "09:00"
+    },
+    {
+      "activityName": "testing",
+      "durationInMin": 80,
+      "notes": "Performance tests",
+      "timestamp": "14:00"
+    }
+  ],
+  "2026-01-21": [
+    {
+      "activityName": "meeting",
+      "durationInMin": 100,
+      "notes": "Mid-month review",
+      "timestamp": "10:00"
+    },
+    {
+      "activityName": "writing",
+      "durationInMin": 75,
+      "notes": "Technical specs",
+      "timestamp": "15:00"
+    }
+  ],
+  "2026-01-22": [
+    {
+      "activityName": "learning",
+      "durationInMin": 85,
+      "notes": "Docker & Kubernetes",
+      "timestamp": "11:00"
+    },
+    {
+      "activityName": "exercise",
+      "durationInMin": 55,
+      "notes": "Gym session",
+      "timestamp": "07:00"
+    }
+  ],
+  "2026-01-23": [
+    {
+      "activityName": "coding",
+      "durationInMin": 165,
+      "notes": "Microservices architecture",
+      "timestamp": "09:00"
+    },
+    {
+      "activityName": "reading",
+      "durationInMin": 40,
+      "notes": "System design",
+      "timestamp": "16:00"
+    }
+  ],
+  "2026-01-24": [
+    {
+      "activityName": "debugging",
+      "durationInMin": 95,
+      "notes": "Production issues",
+      "timestamp": "10:00"
+    },
+    {
+      "activityName": "exercise",
+      "durationInMin": 35,
+      "notes": "Stretching",
+      "timestamp": "18:00"
+    }
+  ],
+  "2026-01-25": [
+    {
+      "activityName": "coding",
+      "durationInMin": 140,
+      "notes": "Security patches",
+      "timestamp": "09:00"
+    },
+    {
+      "activityName": "meeting",
+      "durationInMin": 75,
+      "notes": "Security audit",
+      "timestamp": "14:00"
+    }
+  ],
+  "2026-01-26": [
+    {
+      "activityName": "learning",
+      "durationInMin": 100,
+      "notes": "Cloud architecture",
+      "timestamp": "11:00"
+    },
+    {
+      "activityName": "writing",
+      "durationInMin": 50,
+      "notes": "Blog series",
+      "timestamp": "15:00"
+    }
+  ],
+  "2026-01-27": [
+    {
+      "activityName": "coding",
+      "durationInMin": 155,
+      "notes": "API v2 implementation",
+      "timestamp": "09:00"
+    },
+    {
+      "activityName": "testing",
+      "durationInMin": 70,
+      "notes": "Regression tests",
+      "timestamp": "14:00"
+    }
+  ],
+  "2026-01-28": [
+    {
+      "activityName": "exercise",
+      "durationInMin": 60,
+      "notes": "Marathon training",
+      "timestamp": "07:00"
+    },
+    {
+      "activityName": "reading",
+      "durationInMin": 45,
+      "notes": "Performance optimization",
+      "timestamp": "16:00"
+    }
+  ],
+  "2026-01-29": [
+    {
+      "activityName": "meeting",
+      "durationInMin": 90,
+      "notes": "Sprint retrospective",
+      "timestamp": "10:00"
+    },
+    {
+      "activityName": "coding",
+      "durationInMin": 125,
+      "notes": "Technical debt",
+      "timestamp": "14:00"
+    }
+  ],
+  "2026-01-30": [
+    {
+      "activityName": "learning",
+      "durationInMin": 110,
+      "notes": "AI/ML advanced topics",
+      "timestamp": "09:00"
+    },
+    {
+      "activityName": "exercise",
+      "durationInMin": 40,
+      "notes": "Yoga session",
+      "timestamp": "07:00"
+    }
+  ],
+  "2026-01-31": [
+    {
+      "activityName": "coding",
+      "durationInMin": 150,
+      "notes": "Month-end release",
+      "timestamp": "09:00"
+    },
+    {
+      "activityName": "meeting",
+      "durationInMin": 120,
+      "notes": "Month-end planning",
+      "timestamp": "14:00"
+    },
+    {
+      "activityName": "journaling",
+      "durationInMin": 45,
+      "notes": "January reflection",
+      "timestamp": "18:00"
     }
   ]
 }
