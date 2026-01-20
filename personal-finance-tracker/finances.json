@@ -1,0 +1,465 @@
+{
+  "expenses": [
+    {
+      "date": "2026-01-01",
+      "amount": 35.5,
+      "category": "groceries",
+      "description": "new year groceries",
+      "timestamp": "10:15"
+    },
+    {
+      "date": "2026-01-02",
+      "amount": 12.99,
+      "category": "entertainment",
+      "description": "movie tickets",
+      "timestamp": "18:45"
+    },
+    {
+      "date": "2026-01-03",
+      "amount": 45.0,
+      "category": "transport",
+      "description": "gas",
+      "timestamp": "09:30"
+    },
+    {
+      "date": "2026-01-04",
+      "amount": 28.5,
+      "category": "groceries",
+      "description": "weekly shopping",
+      "timestamp": "14:20"
+    },
+    {
+      "date": "2026-01-05",
+      "amount": 15.0,
+      "category": "entertainment",
+      "description": "dinner out",
+      "timestamp": "19:00"
+    },
+    {
+      "date": "2026-01-06",
+      "amount": 50.0,
+      "category": "groceries",
+      "description": "weekly shopping",
+      "timestamp": "14:30"
+    },
+    {
+      "date": "2026-01-07",
+      "amount": 22.0,
+      "category": "transport",
+      "description": "taxi ride",
+      "timestamp": "11:15"
+    },
+    {
+      "date": "2026-01-08",
+      "amount": 8.5,
+      "category": "entertainment",
+      "description": "coffee",
+      "timestamp": "09:00"
+    },
+    {
+      "date": "2026-01-09",
+      "amount": 60.0,
+      "category": "groceries",
+      "description": "bulk groceries",
+      "timestamp": "15:45"
+    },
+    {
+      "date": "2026-01-10",
+      "amount": 30.0,
+      "category": "entertainment",
+      "description": "concert tickets",
+      "timestamp": "20:30"
+    },
+    {
+      "date": "2026-01-11",
+      "amount": 40.0,
+      "category": "transport",
+      "description": "fuel",
+      "timestamp": "08:00"
+    },
+    {
+      "date": "2026-01-12",
+      "amount": 25.5,
+      "category": "groceries",
+      "description": "vegetables and fruits",
+      "timestamp": "17:00"
+    },
+    {
+      "date": "2026-01-13",
+      "amount": 18.0,
+      "category": "entertainment",
+      "description": "streaming service",
+      "timestamp": "12:00"
+    },
+    {
+      "date": "2026-01-14",
+      "amount": 55.0,
+      "category": "groceries",
+      "description": "weekly groceries",
+      "timestamp": "16:15"
+    },
+    {
+      "date": "2026-01-15",
+      "amount": 35.0,
+      "category": "transport",
+      "description": "car maintenance",
+      "timestamp": "10:30"
+    },
+    {
+      "date": "2026-01-16",
+      "amount": 20.0,
+      "category": "entertainment",
+      "description": "lunch with friends",
+      "timestamp": "12:45"
+    },
+    {
+      "date": "2026-01-17",
+      "amount": 42.75,
+      "category": "groceries",
+      "description": "weekly shopping",
+      "timestamp": "14:30"
+    },
+    {
+      "date": "2026-01-18",
+      "amount": 15.5,
+      "category": "transport",
+      "description": "parking fee",
+      "timestamp": "14:00"
+    },
+    {
+      "date": "2026-01-19",
+      "amount": 28.0,
+      "category": "entertainment",
+      "description": "gym membership",
+      "timestamp": "07:00"
+    },
+    {
+      "date": "2026-01-20",
+      "amount": 50,
+      "category": "shopping",
+      "description": "vacation",
+      "timestamp": "16:50"
+    },
+    {
+      "date": "2026-01-21",
+      "amount": 38.5,
+      "category": "groceries",
+      "description": "groceries",
+      "timestamp": "15:00"
+    },
+    {
+      "date": "2026-01-22",
+      "amount": 45.0,
+      "category": "transport",
+      "description": "uber rides",
+      "timestamp": "18:30"
+    },
+    {
+      "date": "2026-01-23",
+      "amount": 32.0,
+      "category": "entertainment",
+      "description": "restaurant",
+      "timestamp": "19:15"
+    },
+    {
+      "date": "2026-01-24",
+      "amount": 55.5,
+      "category": "groceries",
+      "description": "weekly shopping",
+      "timestamp": "14:45"
+    },
+    {
+      "date": "2026-01-25",
+      "amount": 20.0,
+      "category": "entertainment",
+      "description": "bowling",
+      "timestamp": "19:00"
+    },
+    {
+      "date": "2026-01-26",
+      "amount": 40.0,
+      "category": "transport",
+      "description": "gas",
+      "timestamp": "09:15"
+    },
+    {
+      "date": "2026-01-27",
+      "amount": 25.99,
+      "category": "entertainment",
+      "description": "books",
+      "timestamp": "11:30"
+    },
+    {
+      "date": "2026-01-28",
+      "amount": 48.75,
+      "category": "groceries",
+      "description": "groceries",
+      "timestamp": "16:00"
+    },
+    {
+      "date": "2026-01-29",
+      "amount": 35.5,
+      "category": "transport",
+      "description": "car wash",
+      "timestamp": "10:45"
+    },
+    {
+      "date": "2026-01-30",
+      "amount": 60.0,
+      "category": "entertainment",
+      "description": "vacation planning",
+      "timestamp": "15:30"
+    },
+    {
+      "date": "2026-01-31",
+      "amount": 52.0,
+      "category": "groceries",
+      "description": "month-end groceries",
+      "timestamp": "17:00"
+    },
+    {
+      "date": "2025-12-01",
+      "amount": 42.0,
+      "category": "groceries",
+      "description": "month-start groceries",
+      "timestamp": "15:30"
+    },
+    {
+      "date": "2025-12-02",
+      "amount": 28.5,
+      "category": "transport",
+      "description": "bus pass",
+      "timestamp": "08:00"
+    },
+    {
+      "date": "2025-12-03",
+      "amount": 35.0,
+      "category": "entertainment",
+      "description": "holiday shopping",
+      "timestamp": "17:45"
+    },
+    {
+      "date": "2025-12-04",
+      "amount": 55.75,
+      "category": "groceries",
+      "description": "weekly groceries",
+      "timestamp": "14:20"
+    },
+    {
+      "date": "2025-12-05",
+      "amount": 20.0,
+      "category": "entertainment",
+      "description": "christmas decoration",
+      "timestamp": "19:15"
+    },
+    {
+      "date": "2025-12-06",
+      "amount": 40.0,
+      "category": "transport",
+      "description": "fuel",
+      "timestamp": "09:00"
+    },
+    {
+      "date": "2025-12-07",
+      "amount": 48.5,
+      "category": "groceries",
+      "description": "weekly shopping",
+      "timestamp": "16:00"
+    },
+    {
+      "date": "2025-12-08",
+      "amount": 25.0,
+      "category": "entertainment",
+      "description": "holiday party",
+      "timestamp": "20:00"
+    },
+    {
+      "date": "2025-12-09",
+      "amount": 32.0,
+      "category": "transport",
+      "description": "taxi ride",
+      "timestamp": "18:30"
+    },
+    {
+      "date": "2025-12-10",
+      "amount": 60.0,
+      "category": "groceries",
+      "description": "bulk shopping",
+      "timestamp": "15:45"
+    },
+    {
+      "date": "2025-12-11",
+      "amount": 18.5,
+      "category": "entertainment",
+      "description": "movie night",
+      "timestamp": "19:30"
+    },
+    {
+      "date": "2025-12-12",
+      "amount": 45.0,
+      "category": "transport",
+      "description": "car maintenance",
+      "timestamp": "10:15"
+    },
+    {
+      "date": "2025-12-13",
+      "amount": 50.0,
+      "category": "groceries",
+      "description": "weekend groceries",
+      "timestamp": "14:00"
+    },
+    {
+      "date": "2025-12-14",
+      "amount": 30.0,
+      "category": "entertainment",
+      "description": "gift shopping",
+      "timestamp": "18:00"
+    },
+    {
+      "date": "2025-12-15",
+      "amount": 38.5,
+      "category": "transport",
+      "description": "parking",
+      "timestamp": "12:30"
+    },
+    {
+      "date": "2025-12-16",
+      "amount": 55.0,
+      "category": "groceries",
+      "description": "weekly shopping",
+      "timestamp": "16:15"
+    },
+    {
+      "date": "2025-12-17",
+      "amount": 22.0,
+      "category": "entertainment",
+      "description": "holiday concert",
+      "timestamp": "19:45"
+    },
+    {
+      "date": "2025-12-18",
+      "amount": 40.0,
+      "category": "transport",
+      "description": "fuel",
+      "timestamp": "08:45"
+    },
+    {
+      "date": "2025-12-19",
+      "amount": 58.75,
+      "category": "groceries",
+      "description": "holiday groceries",
+      "timestamp": "15:30"
+    },
+    {
+      "date": "2025-12-20",
+      "amount": 45.0,
+      "category": "entertainment",
+      "description": "gift shopping spree",
+      "timestamp": "17:00"
+    },
+    {
+      "date": "2025-12-21",
+      "amount": 32.0,
+      "category": "transport",
+      "description": "uber rides",
+      "timestamp": "19:00"
+    },
+    {
+      "date": "2025-12-22",
+      "amount": 62.0,
+      "category": "groceries",
+      "description": "christmas groceries",
+      "timestamp": "14:45"
+    },
+    {
+      "date": "2025-12-23",
+      "amount": 35.0,
+      "category": "entertainment",
+      "description": "christmas party",
+      "timestamp": "20:30"
+    },
+    {
+      "date": "2025-12-24",
+      "amount": 50.0,
+      "category": "groceries",
+      "description": "holiday feast shopping",
+      "timestamp": "10:00"
+    },
+    {
+      "date": "2025-12-25",
+      "amount": 15.5,
+      "category": "entertainment",
+      "description": "christmas dinner",
+      "timestamp": "18:00"
+    },
+    {
+      "date": "2025-12-26",
+      "amount": 38.0,
+      "category": "transport",
+      "description": "post-holiday travel",
+      "timestamp": "11:15"
+    },
+    {
+      "date": "2025-12-27",
+      "amount": 45.75,
+      "category": "groceries",
+      "description": "week-end groceries",
+      "timestamp": "15:00"
+    },
+    {
+      "date": "2025-12-28",
+      "amount": 28.0,
+      "category": "entertainment",
+      "description": "new year prep",
+      "timestamp": "19:30"
+    },
+    {
+      "date": "2025-12-29",
+      "amount": 40.0,
+      "category": "transport",
+      "description": "year-end fuel",
+      "timestamp": "09:30"
+    },
+    {
+      "date": "2025-12-30",
+      "amount": 55.0,
+      "category": "groceries",
+      "description": "last groceries of year",
+      "timestamp": "16:00"
+    },
+    {
+      "date": "2025-12-31",
+      "amount": 65.0,
+      "category": "entertainment",
+      "description": "new year celebration",
+      "timestamp": "20:00"
+    }
+  ],
+  "income": [
+    {
+      "date": "2026-01-01",
+      "amount": 2000.0,
+      "source": "salary",
+      "description": "monthly salary"
+    },
+    {
+      "date": "2026-01-20",
+      "amount": 9000,
+      "source": "salary",
+      "description": "jan"
+    }
+  ],
+  "budget": {
+    "monthly_limit": 500,
+    "category_limits": {
+      "groceries": 200,
+      "transport": 100,
+      "entertainment": 100
+    }
+  },
+  "savings_goal": {
+    "target": 1000,
+    "current": 150,
+    "purpose": "vacation"
+  }
+}
