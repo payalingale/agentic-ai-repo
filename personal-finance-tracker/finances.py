@@ -2,10 +2,56 @@ import os
 from datetime import datetime,timedelta
 from dotenv import load_dotenv
 import json
+import anthropic
 load_dotenv()
 
 File_path = os.path.join(os.path.dirname(__file__),'finances.json')
+api_key = os.environ.get('API_KEY')
+client = anthropic.Anthropic(api_key=api_key)
 
+def process_tool(tool_name,tool_input):
+   if tool_name =='log_expense':
+    return log_expense(tool_input)
+   elif tool_name == 'log_income':
+      return log_income(tool_input)
+   elif tool_name == 'get_monthly_summary':
+      return get_monthly_summary()
+   elif tool_name == 'check_budget':
+      return check_budget()
+   elif tool_name == 'get_savings_progress':
+      return get_savings_progress()
+   elif tool_name == 'set_savings_goal':
+      return set_savings_goal()
+   else :
+      print('tool doesnt exist for the agent needed')
+   
+def ask_finance_ai():
+   conversation_history = [
+        {"role": "user", "content": question}
+    ]
+   tools_used = []
+   while True:
+    response = client.messages.create(
+      max_tokens=6000,
+      model='claude-3-7-sonnet-20250219',
+      thinking={
+         'type':'enabled',
+         'budget_tokens':5000
+      },
+      tools=tools,
+      messages=[{
+         'role':'user',
+         'content':conversation_history
+      }]
+   )
+    if response.stop_reason == 'tool_use':
+       for block in response.content:
+                if block.type == "tool_use":
+                    tool_name = block.name
+                    tool_input = block.input
+                    tool_id = block.id
+
+    return {tool_name,tool_input,tool_id}
 tools = [
     {
         'name': 'log_expense',
@@ -149,25 +195,25 @@ def log_income(amount,source,description=''):
     save_finances(finances)
     print(f'income {finances}')
 
-def set_savings_goal(target,reason=''):
+def set_savings_goal(target,purpose=''):
      finances = load_finances()
      savings = {
     'target':target,
-    'reason':reason
+    'purpose':purpose
     }
-     finances['savings_goal'].append(savings)
+     finances['savings_goal'].update(savings)
      save_finances(finances)
      print(f'income {finances}')
      print('saving goals')
 
-def get_monthly_summary(category):
+def get_monthly_summary():
  try:
     finances = load_finances()
     currentDate = datetime.now().date()
     monthlyDates = [str(currentDate - timedelta(days=i)) for i in range(30)]
     monthly_summary ={}
 
-    for expense in finances[category]:
+    for expense in finances['expenses']:
      if expense['date'] in monthlyDates:
        cat = expense['category']
        if  cat in monthly_summary:
@@ -185,6 +231,7 @@ def check_budget():
    monthlyDate = [str(currentDate-timedelta(days=i)) for i in range(30)]
 
    total_spend_monthly = 0
+   budgetAmt=0
    for expenses in finances['expenses']:
       if expenses['date'] in monthlyDate:
          total_spend_monthly += expenses['amount']
@@ -200,6 +247,7 @@ def get_savings_progress():
    saving_goal = finances['savings_goal']
    percentage = (saving_goal['current']/saving_goal['target'])*100
    return f'You have reached saving {percentage} %'
+
 
 
 # # print(get_monthly_summary('expenses'))
