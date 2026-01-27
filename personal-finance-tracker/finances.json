@@ -433,6 +433,13 @@
       "category": "entertainment",
       "description": "new year celebration",
       "timestamp": "20:00"
+    },
+    {
+      "date": "2026-01-26",
+      "amount": 210,
+      "category": "other",
+      "description": "hoodie",
+      "timestamp": "15:25"
     }
   ],
   "income": [

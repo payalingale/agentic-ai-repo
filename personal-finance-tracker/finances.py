@@ -11,9 +11,9 @@ client = anthropic.Anthropic(api_key=api_key)
 
 def process_tool(tool_name,tool_input):
    if tool_name =='log_expense':
-    return log_expense(tool_input)
+    return log_expense(tool_input['amount'],tool_input['category'],tool_input['description'])
    elif tool_name == 'log_income':
-      return log_income(tool_input)
+      return log_income(tool_input['amount'],tool_input['source'])
    elif tool_name == 'get_monthly_summary':
       return get_monthly_summary()
    elif tool_name == 'check_budget':
@@ -21,37 +21,72 @@ def process_tool(tool_name,tool_input):
    elif tool_name == 'get_savings_progress':
       return get_savings_progress()
    elif tool_name == 'set_savings_goal':
-      return set_savings_goal()
+      return set_savings_goal(tool_input['target'],tool_input['purpose'])
    else :
       print('tool doesnt exist for the agent needed')
    
-def ask_finance_ai():
-   conversation_history = [
+def ask_finance_ai(question):  # ← Add parameter
+    conversation_history = [
         {"role": "user", "content": question}
     ]
-   tools_used = []
-   while True:
-    response = client.messages.create(
-      max_tokens=6000,
-      model='claude-3-7-sonnet-20250219',
-      thinking={
-         'type':'enabled',
-         'budget_tokens':5000
-      },
-      tools=tools,
-      messages=[{
-         'role':'user',
-         'content':conversation_history
-      }]
-   )
-    if response.stop_reason == 'tool_use':
-       for block in response.content:
+    
+    tools_used = []
+    
+    while True:
+        response = client.messages.create(
+            max_tokens=6000,
+            model='claude-sonnet-4-20250514',
+            thinking={
+                'type': 'enabled',
+                'budget_tokens': 5000
+            },
+            tools=tools,
+            messages=conversation_history  
+        )
+        
+        if response.stop_reason == 'tool_use':
+            print("\n🤖 AI is using tools...\n")
+            
+            for block in response.content:
                 if block.type == "tool_use":
                     tool_name = block.name
                     tool_input = block.input
                     tool_id = block.id
-
-    return {tool_name,tool_input,tool_id}
+                    
+                    tools_used.append(tool_name)
+                    
+                    print(f"Using: {tool_name}")
+                    
+                    # TODO: Execute the tool
+                    tool_result = process_tool(tool_name, tool_input)
+                    
+                    print(f"   Result: {tool_result}\n")
+                    
+                    # TODO: Add assistant response to history
+                    conversation_history.append({
+                        "role": "assistant",
+                        "content": response.content
+                    })
+                    
+                    # TODO: Add tool result to history
+                    conversation_history.append({
+                        "role": "user",
+                        "content": [{
+                            "type": "tool_result",
+                            "tool_use_id": tool_id,
+                            "content": str(tool_result)
+                        }]
+                    })
+            
+            continue  
+        
+        # No tool use - extract final answer
+        final_text = ""
+        for block in response.content:
+            if block.type == "text":
+                final_text += block.text
+        
+        return final_text  # ← Return final answer
 tools = [
     {
         'name': 'log_expense',
@@ -181,7 +216,7 @@ def log_expense(amount, category, description=""):
    finances['expenses'].append(
        expenses)
    save_finances(finances)
-   print(finances)
+
 
 def log_income(amount,source,description=''):
     finances = load_finances()
@@ -248,6 +283,36 @@ def get_savings_progress():
    percentage = (saving_goal['current']/saving_goal['target'])*100
    return f'You have reached saving {percentage} %'
 
+
+def main():
+    print("💰 Personal Finance AI Agent")
+    print("Track expenses, income, and savings goals!\n")
+    print("Examples:")
+    print("  - I spent 50 dollars on groceries")
+    print("  - I earned 500 from freelancing")
+    print("  - Show my monthly summary")
+    print("  - Am I over budget?")
+    print("  - Set savings goal of 2000 for vacation\n")
+
+    while True:
+        question = input("You: ").strip()
+        
+        if question.lower() in ['quit', 'exit', 'bye']:
+            print("👋 Goodbye!")
+            break
+        
+        if not question:
+            continue
+        
+        try:
+            response = ask_finance_ai(question)
+            print(f"\n🤖 AI: {response}\n")
+            print("-" * 60 + "\n")
+        except Exception as e:
+            print(f"❌ Error: {e}\n")
+
+if __name__ == '__main__':
+    main()
 
 
 # # print(get_monthly_summary('expenses'))
