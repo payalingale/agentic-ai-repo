@@ -1,0 +1,203 @@
+PERFECT! You Want to Build It Yourself!
+I LOVE this approach! This is how you truly learn! 💪
+
+📋 YOUR ASSIGNMENT: Build ConversationManager Library
+
+🎯 REQUIREMENTS
+PART 1: Core Class Structure (15 min)
+Create: conversation_manager.py
+Build a class called ConversationManager with:
+
+1. Initialization:
+   pythonmanager = ConversationManager(
+   strategy='sliding_window', # or 'summarization' or 'importance'
+   max_messages=20,
+   client=None # Optional, needed for summarization
+   )
+2. Required Methods:
+
+add_user_message(content) - Add user message
+add_assistant_message(content) - Add assistant message
+get_history() - Return messages ready for Claude API
+clear() - Reset conversation
+get_stats() - Return dict with info about conversation
+
+3. Internal State:
+
+Store messages list
+Store which strategy is active
+Store any strategy-specific settings
+
+PART 2: Implement Strategies (20 min)
+Your manager should support 3 strategies:
+Strategy 1: Sliding Window
+
+Keep only last N messages
+When adding new message, drop oldest if over limit
+
+Strategy 2: Summarization
+
+After X messages, summarize oldest
+Keep summary + recent messages
+Requires client for summarization
+
+Strategy 3: Importance
+
+Mark messages with keywords as important
+Keep important + recent
+Keywords: ['error', 'problem', 'name', 'critical', 'important']
+
+Each strategy should be implemented as:
+
+Either: Separate methods in ConversationManager
+Or: Separate classes that ConversationManager uses
+Your choice!
+
+PART 3: Handle Tool Use (15 min)
+Support adding tool use responses:
+python# When Claude uses a tool
+manager.add_assistant_response(response.content)
+
+# ^ Should handle both text and tool_use content
+
+# When tool returns result
+
+manager.add_tool_result(tool_use_id, result)
+Requirements:
+
+Must work with your Email Assistant pattern
+Must preserve tool_use blocks correctly
+Must maintain proper message order
+
+PART 4: Utilities (10 min)
+Add these helper methods:
+
+1. Token estimation:
+   pythonestimated_tokens = manager.estimate_tokens()
+
+# Return rough estimate of tokens in current history
+
+2. Save/Load:
+   pythonmanager.save_to_file('conversation.json')
+   manager2 = ConversationManager.load_from_file('conversation.json')
+3. Statistics:
+   pythonstats = manager.get_stats()
+
+# Returns:
+
+# {
+
+# 'total_messages': 10,
+
+# 'estimated_tokens': 250,
+
+# 'strategy': 'sliding_window',
+
+# 'messages_kept': 8,
+
+# 'messages_dropped': 2
+
+# }
+
+✅ SUCCESS CRITERIA
+Your ConversationManager is complete when:
+Test 1: Basic Usage
+pythonmanager = ConversationManager(strategy='sliding_window', max_messages=6)
+
+manager.add_user_message("My name is Payal")
+manager.add_assistant_message("Nice to meet you!")
+manager.add_user_message("I like AI")
+manager.add_assistant_message("Cool!")
+manager.add_user_message("I work as a developer")
+manager.add_assistant_message("Great!")
+
+# Should have 6 messages
+
+assert len(manager.get_history()) == 6
+
+# Add 2 more (should drop oldest 2)
+
+manager.add_user_message("I live in Abu Dhabi")
+manager.add_assistant_message("Wonderful!")
+
+# Still should have 6 messages
+
+assert len(manager.get_history()) == 6
+Test 2: Strategy Switching
+python# All 3 strategies should work
+manager1 = ConversationManager(strategy='sliding_window', max_messages=10)
+manager2 = ConversationManager(strategy='summarization', client=client)
+manager3 = ConversationManager(strategy='importance', max_messages=20)
+Test 3: Real Agent Integration
+python# Should work seamlessly with Claude API
+manager = ConversationManager(strategy='sliding_window', max_messages=20)
+
+manager.add_user_message("Hello")
+response = client.messages.create(
+model='claude-sonnet-4-20250514',
+messages=manager.get_history()
+)
+manager.add_assistant_response(response.content)
+Test 4: Save/Load
+pythonmanager.save_to_file('test.json')
+loaded = ConversationManager.load_from_file('test.json')
+assert loaded.get_history() == manager.get_history()
+
+💡 DESIGN HINTS
+Think about:
+
+Strategy Pattern: How will you switch between strategies?
+
+If/else in methods?
+Separate strategy classes?
+Strategy parameter checked each time?
+
+Tool Use: How to detect if content has tool_use blocks?
+
+Check type of content items?
+Separate method vs auto-detect?
+
+Summarization: Needs client - how to handle?
+
+Store client in init?
+Pass client to methods that need it?
+Raise error if strategy needs client but not provided?
+
+Error Handling: What if someone does:
+
+Wrong strategy name?
+Summarization without client?
+Invalid message format?
+
+🎯 YOUR DELIVERABLE
+Build the complete ConversationManager class that:
+
+✅ Implements all 3 strategies
+✅ Handles tool use
+✅ Provides utilities (stats, save/load, token estimate)
+✅ Passes all 4 tests above
+✅ Is clean, documented, reusable
+
+📊 TIME ESTIMATE
+
+Part 1 (Core): 15 min
+Part 2 (Strategies): 20 min
+Part 3 (Tool Use): 15 min
+Part 4 (Utilities): 10 min
+
+Total: ~60 min
+
+🚀 WHEN YOU'RE DONE
+Share your code and:
+
+Show the 4 tests passing
+Explain which design choices you made
+Any challenges you faced
+What you learned
+
+Then we'll review it together and polish it!
+
+💪 YOU GOT THIS!
+You've built 3 agents already. You understand all the strategies. Now put it all together into one reusable library!
+This is the capstone of Day 2! 🎯
+Start coding! Come back when you have something working! 🚀 Sonnet 4.5
